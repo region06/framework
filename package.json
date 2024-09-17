@@ -1,7 +1,38 @@
 {
   "name": "framework",
-  "module": "index.ts",
+  "version": "1.0.0",
+  "description": "Simple, comprehensive framework you will be familiar with from the beginning to build apps faster.",
+  "keywords": [
+    "node",
+    "backend",
+    "server",
+    "framework",
+    "api",
+    "crud",
+    "auth",
+    "orm"
+  ],
   "type": "module",
+  "module": "index.ts",
+  "author": {
+    "name": "Daniel TORSCHO",
+    "email": "daniel.torscho+reg06@gmail.com",
+    "url": "https://reg06.com/framework"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reg06/framework"
+  },
+  "bugs": {
+    "url": "https://github.com/reg06/framework/issues"
+  },
+  "contributors": [],
+  "engines": {
+    "node": ">= 20.10.0",
+    "npm": ">= 10.2.0",
+    "yarn": "^1.22.0"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
