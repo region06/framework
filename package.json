@@ -1,6 +1,6 @@
 {
-  "name": "framework",
-  "version": "1.0.0",
+  "name": "framework06",
+  "version": "0.0.1",
   "description": "Simple, comprehensive framework you will be familiar with from the beginning to build apps faster.",
   "keywords": [
     "node",
@@ -17,15 +17,15 @@
   "author": {
     "name": "Daniel TORSCHO",
     "email": "daniel.torscho+reg06@gmail.com",
-    "url": "https://reg06.com/framework"
+    "url": "https://reg06.com/framework06"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/region06/framework"
+    "url": "https://github.com/region06/framework06"
   },
   "bugs": {
-    "url": "https://github.com/region06/framework/issues"
+    "url": "https://github.com/region06/framework06/issues"
   },
   "contributors": [],
   "engines": {
