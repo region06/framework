@@ -33,7 +33,7 @@ export default class Server {
       },
     });
 
-    console.log("Server is running at localhost:3000");
+    console.log(`Server is running on ${this.server.url.host} ...`);
     return this.server;
   }
 
