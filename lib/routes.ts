@@ -14,7 +14,7 @@ interface IRoute {
   handler: (req?: Request) => Promise<Response> | Response;
 }
 
-class Route {
+class Router {
   public list: IRoute[];
 
   constructor() {
@@ -26,4 +26,4 @@ class Route {
   }
 }
 
-export default Route;
+export default Router;

@@ -54,18 +54,3 @@ it("should handle route action in json format", async () => {
     "application/json;charset=utf-8"
   );
 });
-
-// it.skip("responds to GET route with 200", async () => {
-//   // Given
-//   const router = null;
-//   router.get("/test", (req, res) => {
-//     res.statusCode(200);
-//     res.send("test page");
-//   });
-
-//   // When
-//   const request = await fetch("http://localhost:3000/test");
-
-//   // Then
-//   expect(request.statusCode).toBe(200);
-// });

@@ -1,13 +1,33 @@
-import type { Serve } from "bun";
+import type { Server as BunServer } from "bun";
+import Router from "./routes";
 
 export default class Server {
-  private server: any;
+  private server: BunServer | undefined;
+  public router: Router;
 
-  public start() {
+  constructor() {
+    this.server = undefined;
+    this.router = new Router();
+  }
+
+  public async start(port: number) {
+    const router = this.router;
     this.server = Bun.serve({
-      port: 3000,
-      fetch() {
-        return new Response("");
+      port,
+      fetch(request) {
+        const url = new URL(request.url);
+        const path = url.pathname;
+        const method = request.method;
+
+        const route = router.list.find(
+          (r) => r.path === path && r.method === method
+        );
+
+        if (route) {
+          return route.handler(request);
+        }
+
+        return new Response("Not found", { status: 404 });
       },
     });
 
