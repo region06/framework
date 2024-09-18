@@ -1,1 +1,3 @@
-console.log("Initial framework run!");
+import Server from "./lib/server";
+
+module.exports = () => new Server();
