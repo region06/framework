@@ -1,15 +1,9 @@
-# framework
+## Installation
 
-To install dependencies:
+Install npm package via command line: `npm i framework06`
 
-```bash
-bun install
+## How to use
+
+```javascript
+import framework from "framework06";
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.1.28. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
