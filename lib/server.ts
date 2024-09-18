@@ -10,7 +10,9 @@ export default class Server {
     this.router = new Router();
   }
 
-  public async start(port: number) {
+  public async start(port?: number) {
+    if (!port) port = 3000;
+
     const router = this.router;
     this.server = Bun.serve({
       port,

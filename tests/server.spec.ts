@@ -3,7 +3,7 @@ import Server from "../lib/server";
 
 let server: Server;
 let consoleLog: typeof console.log;
-let port: number = 3000;
+let port: number = 3000 | 3000;
 
 beforeEach(() => {
   port++;
@@ -21,18 +21,18 @@ afterEach(() => {
   console.log = consoleLog;
 });
 
-test("server is up and running at port 3000", async () => {
+test("server is up and running at port 3000 if not defined manually", async () => {
   // Given
   server = new Server();
-  await server.start(port);
+  await server.start();
 
   // When
-  const request = await fetch(`http://localhost:${port}/`);
+  const request = await fetch(`http://localhost:3000/`);
 
   // Then
   expect(request.status).toBe(404);
   expect(request.ok).toBe(false);
-  expect(request.url).toEqual(`http://localhost:${port}/`);
+  expect(request.url).toEqual(`http://localhost:3000/`);
 });
 
 test("server should be stopped if requested", async () => {
